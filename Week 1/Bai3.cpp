@@ -1,46 +1,48 @@
 //Sinh cac tap con k ptu cua tap S = {1,2,...,n}
+
 #include<iostream>
 using namespace std;
 
-int n,k,a[100],ok;
+int x[1000];
+int n, k, i;
 
-void ktao(){
-	for(int i=1; i<=k; i++){
-		a[i] = i;
+void next_config(){
+	x[i]+=1;
+	i++;
+	while(i<=k){
+		x[i] = x[i-1]+1;
+		i++;
 	}
 }
 
-void sinh(){
-	int i=k;
-	//gioi han tren n-k+i
-	while(i>0 && a[i] == n-k+i){
-		i--;
+void view_config(){
+	for(int i=1; i<=k; i++){
+		cout<<x[i];
 	}
-	if(i>0) { //chua phai cau hinh cuoi
-		
+	cout<<"\n";
+}
+
+void listing_configs(){
+	//sinh cau hinh dau tien
+	for(int i=1; i<=k; i++){
+		x[i] = i;
 	}
-	if(i==0){
-		ok=0;
-	}
-	else{
-		a[i]++;
-		for(int j=i+1; j<=k; j++){
-			a[j]=a[j-1]+1;
+	do{
+		view_config(); //sinh xong thi in cau hinh
+		i=k;
+		while(i>0 && x[i] == n-k+i){
+			i--;
+		}
+		if(i>0){
+			next_config();
 		}
 	}
+	while(i>0);
 }
 
 int main(){
-	cout<<"Nhap n: "; cin>>n;
-	cout<<"Nhap k: "; cin>>k;
-	ok=1;
-	ktao();
-	while(ok){
-		for(int i=1; i<=k; i++){
-			cout<<a[i];
-		}
-		cout<<endl;
-		sinh();
-	}
+	cout<<"Nhap n = "; cin>>n;
+	cout<<"Nhap k = "; cin>>k;
+	listing_configs();
 	return 0;
 }
