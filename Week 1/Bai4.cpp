@@ -4,7 +4,7 @@
 using namespace std;
 
 string a[] = {"Trang", "Cong", "Trung", "Binh", "Hoan", "Mai"};
-int x[100];
+int x[100]; //khai bao cuc bo mang a gom 100 ptu gtri == 0
 int n=6;
 int k=4;
 int i;

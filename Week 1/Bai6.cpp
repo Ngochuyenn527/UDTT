@@ -3,7 +3,7 @@
 using namespace std;
 string a[6] = {"Trang", "Cong", "Trung", "Binh", "Hoan", "Mai"};
 int n=6;
-int x[100], k ,i;
+int x[100], k ,i; //khai bao cuc bo mang a gom 100 ptu gtri == 0
 
 void swap(int &a, int &b){
 	int temp = a;

@@ -3,7 +3,8 @@
 #include<iostream>
 using namespace std;
 
-int x[1000];
+int x[100]; //khai bao cuc bo mang a gom 100 ptu gtri == 0
+
 int n, k, i;
 
 void next_config(){

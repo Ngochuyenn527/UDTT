@@ -3,7 +3,7 @@
 #include<iostream>
 
 using namespace std;
-string a[100];
+string a[100]; //khai bao cuc bo mang a gom 100 ptu gtri == 0
 int n;
 
 

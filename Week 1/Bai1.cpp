@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
-int a[100];
-int n;
+int a[100];//khai bao cuc bo mang a gom 100 ptu gtri == 0
+int n; 
 
 void incauhinh(int a[], int n){
 	for(int i=0; i<n; i++){

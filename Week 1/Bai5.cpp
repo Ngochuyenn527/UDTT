@@ -1,7 +1,7 @@
 //sinh hoan vi cua tap  S = {1, 2, …, n}. 
 #include<iostream>
 using namespace std;
-int x[100], n, k, i;
+int x[100], n, k, i; //khai bao cuc bo mang a gom 100 ptu gtri == 0
 
 void swap(int &a, int &b){
 	int temp=a;
