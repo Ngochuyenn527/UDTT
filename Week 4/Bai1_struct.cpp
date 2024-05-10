@@ -57,7 +57,6 @@ void displayList(Hocsinh x[], int &n){
 
 
 int search(Hocsinh x[], string &t, int l, int r){
-	
 	if(l > r) return -1;
 	else{
 		int m = (l+r)/2;
@@ -84,6 +83,9 @@ int main(){
 	displayList(x,n);
 	cout<<"\n";
 	
+	
+	
+	
 	string m;
 	cout<<"Nhap ten cua mot hoc sinh: "; cin>>m;
 	if(search(x,m,0,n-1)){
@@ -94,7 +96,7 @@ int main(){
 //		cout<<setw(20)<<"NAM SINH";
 //		cout<<setw(20)<<"DIA CHI"<<endl;
 //		cout<<"----------------------------------------------------------------------------\n";
-		cout<<x[search(x,m,0,n-1)].ten;
+		cout<<setw(10)<<x[search(x,m,0,n-1)].ten;
 		cout<<setw(20)<<x[search(x,m,0,n-1)].hodem;
 		cout<<setw(20)<<x[search(x,m,0,n-1)].namsinh;
 		cout<<setw(20)<<x[search(x,m,0,n-1)].diachi<<"\n";

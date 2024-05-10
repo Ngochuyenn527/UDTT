@@ -24,5 +24,8 @@ int main(){
 	for(int i=0; i<n; i++){
 		cin>>x[i];
 	}
+	long sum = 0, count = 0;
+	Tong(x,0,n-1,sum,count);
+	cout<<sum<<" "<<count;
 	return 0;
 }

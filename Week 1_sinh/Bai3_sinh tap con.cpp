@@ -1,11 +1,16 @@
 //Sinh cac tap con k ptu cua tap S = {1,2,...,n}
-
 #include<iostream>
+
 using namespace std;
 
-int x[100]; //khai bao cuc bo mang a gom 100 ptu gtri == 0
+int x[100], n=3, k=2, i; //khai bao cuc bo mang x gom 100 ptu gtri == 0
 
-int n, k, i;
+void view_config(){
+	for(int i=1; i<=k; i++){
+		cout<<x[i]<<" ";
+	}
+	cout<<"\n";
+}
 
 void next_config(){
 	x[i]+=1;
@@ -16,18 +21,12 @@ void next_config(){
 	}
 }
 
-void view_config(){
-	for(int i=1; i<=k; i++){
-		cout<<x[i];
-	}
-	cout<<"\n";
-}
-
 void listing_configs(){
 	//sinh cau hinh dau tien
 	for(int i=1; i<=k; i++){
 		x[i] = i;
 	}
+	
 	do{
 		view_config(); //sinh xong thi in cau hinh
 		i=k;
@@ -42,8 +41,6 @@ void listing_configs(){
 }
 
 int main(){
-	cout<<"Nhap n = "; cin>>n;
-	cout<<"Nhap k = "; cin>>k;
 	listing_configs();
 	return 0;
 }

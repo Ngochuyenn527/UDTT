@@ -39,7 +39,7 @@ void merge(int x[], int l, int m, int r){
 	}
 }
 
-//mergeSort : sap xep cac day con
+//mergeSort : sap xep tang dan cac day con
 void mergeSort(int x[], int l, int r){
 	if(l >= r) return;
 	int m = (l+r) / 2;

@@ -1,19 +1,21 @@
 //sinh hoan vi cua tap  S = {1, 2, …, n}. 
 #include<iostream>
-using namespace std;
-int x[100], n, k, i; //khai bao cuc bo mang a gom 100 ptu gtri == 0
 
-void swap(int &a, int &b){
-	int temp=a;
-	a=b;
-	b=temp;
-}
+using namespace std;
+
+int x[100], n, k, i; //khai bao cuc bo mang a gom 100 ptu gtri == 0
 
 void view_config(){
 	for(int i=1; i<=n; i++){
 		cout<<x[i]<<" ";
 	}
 	cout<<endl;
+}
+
+void swap(int &a, int &b){
+	int temp=a;
+	a=b;
+	b=temp;
 }
 
 void next_config(){

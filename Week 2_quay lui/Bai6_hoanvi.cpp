@@ -4,13 +4,13 @@
 
 using namespace std;
 
-int x[100], n, dd[100];
+int x[100], n=4, dd[100];
 //dd la danh dau so do da duoc ghep vo mang x chua
 //neu so do da duoc chon de ghep vo x roi thi gan dd = 1
 
 void show(){
 	for(int i=1; i<=n; i++){
-		cout<<x[i];
+		cout<<x[i]<<" ";
 	}
 	cout<<"\n";
 }
@@ -32,7 +32,6 @@ void Try(int k){
 }
 
 int main(){
-	cin>>n;
 	Try(1);
 	return 0;
 }
