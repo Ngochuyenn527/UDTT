@@ -7,7 +7,7 @@ using namespace std;
 
 int show(int f[6][6], int m, int n){
 	
-	//khoi tao dong dau tien 0
+	//khoi tao dong dau tien i=0
 	f[0][0] = 1;
 	for(int j=1; j<=n; j++){
 		f[0][j] = 0;
@@ -29,7 +29,6 @@ int show(int f[6][6], int m, int n){
 			else{
 				f[i][j] = f[i-1][j] + f[i][j-i];
 				cout<<f[i][j]<<" ";
-
 			//  f(5,5) = f(4,5) + f(5,0) 
 			}
 		}

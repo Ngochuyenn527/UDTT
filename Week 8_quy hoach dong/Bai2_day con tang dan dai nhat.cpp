@@ -5,9 +5,11 @@ using namespace std;
 //bo sung them vao day 2 ptu a[0] = amvocung; a[n+1] = duongvocung
 
 void algorithm(int a[], int L[], int T[], int n){
-	a[0] = -2147483648;
+	
 	a[n+1] = 2147483647;
 	L[n+1] = 1;
+	//T[n+1] = NULL do chua duoc ghep vao hang nao ca
+	a[0] = -2147483648;
 	
 	for(int i=0; i<=n+1; i++){
 		cout<<"a["<<i<<"] = "<<a[i]<<"\n";
@@ -31,9 +33,9 @@ void algorithm(int a[], int L[], int T[], int n){
 //truy vet tren bang phuong an T tim ket qua
 void result(int T[], int a[], int n){
 	int k = T[0];
-	cout<<"Day con: ";
+	cout<<"Day con dai nhat: ";
 	while(k != n+1){
-		cout<<"a["<<k<<"]: "<<a[k]<<" ";
+		cout<<"a["<<k<<"]:"<<a[k]<<" ";
 		k = T[k];
 	}
 }
