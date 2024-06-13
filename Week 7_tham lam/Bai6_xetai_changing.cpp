@@ -1,3 +1,4 @@
+//sd it nhat bnh chiec xe
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -32,11 +33,11 @@ bool taitrong_changing(int sum, int n, Xetai x[], int s[]){
 		sum = sum - s[i] * x[i].taitrong;
 		i++;
 	}
+	
 	if(sum > 0){
 		for(int i=n-1; i>=0; i++){
 			if(x[i].taitrong >= sum){
 				s[i]++;
-				sum = 0;
 				break;
 			}
 		}
@@ -60,17 +61,13 @@ int main(){
 	};
 	
 	sort_taitrong(x,n);
-	cout<<"After sort: ";
-	for(int i=0; i<n; i++){
-		cout<<x[i].taitrong<<" ";
-	}
 	
 	if(taitrong_changing(7000,n,x,s)){
 		int count = 0;
 		for(int i=0; i<n; i++){
 			if(s[i] != 0){
 				count+= s[i];
-				cout<<"\nLay "<<s[i]<< " xe tai co bien so "<<x[i].bienso<<"\n";
+				cout<<"Lay "<<s[i]<< " xe tai co bien so "<<x[i].bienso<<"\n";
 			}
 		}
 		cout<<"Can su dung it nhat "<<count<<" chiec xe tai";

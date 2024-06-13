@@ -6,7 +6,9 @@ using namespace std;
 //m la trong luong cua moi goi: m+1 cot => j = 0->m
 
 //Bang F gom n+1 dong, m+1 cot
-void algorithm(int F[7][13], int w[], int v[], int n, int m){
+void algorithm( int w[], int v[], int n, int m){
+	
+	int F[n+1][m+1];
 	
 	//khoi tao dong dau tien i = 0
 	for(int j=0; j<=m; j++){
@@ -31,9 +33,9 @@ void algorithm(int F[7][13], int w[], int v[], int n, int m){
 		}
 		cout<<"\n";
 	}
-}
-
-void result(int F[7][13], int w[], int v[], int n, int m){
+	
+	
+	//truy vet ket qua
 	cout<<"Max value: "<<F[n][m]<<"\n";
 	int i=n, j=m;
 	cout<<"Danh sach cac goi lay duoc la: ";
@@ -46,16 +48,14 @@ void result(int F[7][13], int w[], int v[], int n, int m){
 	}
 }
 
+	
+
 int main(){
 	int n=6; // so goi hang
 	int m=12; // trong luong cua tui 
 	int w[n+1] = {0,3,6,2,7,1,5}; // trong luong
 	int v[n+1] = {0,4,5,2,6,1,3}; // gia tri
-	int F[7][13];
-	algorithm(F,w,v,n,m);
-	result(F,w,v,n,m);
-	return 0;
 	
-
-	
+	algorithm(w,v,n,m);
+	return 0;	
 }

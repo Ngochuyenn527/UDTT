@@ -10,7 +10,7 @@ using namespace std;
 //Output: Cho biet so luong dong tien it nhat de co tong menh gia bang n
 
 
-
+//sx mang chua cac menh gia tien giam dan
 void bubbleSort(int a[], int m){
 	for(int i=1; i<m; i++){
 		for(int j=m-1; j>=i; j--){
@@ -25,6 +25,7 @@ void bubbleSort(int a[], int m){
 
 
 bool coin_changing(int n, int a[], int s[], int m){
+	//khoi tao mang s[] chua cac gtri 0
 	for(int i=0; i<m ;i++){
 		s[i] = 0;
 	}
