@@ -10,7 +10,12 @@ struct goihang{
 	int v; //gia tri
 };
 
-void algorithm(goihang x[], int n, int m){
+struct ketqua{
+	int u ; 
+	vector<goihang> d; 
+};
+
+ketqua algorithm(goihang x[], int n, int m){
 	
 	int F[n+1][m+1];
 	
@@ -46,19 +51,17 @@ void algorithm(goihang x[], int n, int m){
 	}
 	
 	//truy vet
+	ketqua result; 
 	int i=n, j=m;
-	int count =0;
-	cout<<"Danh sach cac goi lay duoc la: ";
 	while(i != 0){
 		if(F[i][j] != F[i-1][j]){
-			cout<<i<<" ";
-			count++;
+			result.d.push_back(x_new[i]);
+			result.u++;
 			j = j-x_new[i].w;
 		}
 		i--;
 	}
-	cout<<"\nVoi tong so goi lay duoc la: "<<count<<" goi";
-	
+	return result ; 
 }
 
 	
@@ -76,7 +79,12 @@ int main(){
 						{10, 50}, 
 					};
 					
-	algorithm(x,n,m);
+	ketqua result = algorithm(x,n,m);
+	cout << "So luong: " << result.u  << endl ;
+	cout << "Danh dach goi hang " ; 
+	for(int i = 0 ; i < result.d.size();i++){
+		cout << result.d[i].w << " " ;
+	}
 	return 0;
 	
 }

@@ -31,7 +31,7 @@ bool BoyerMooreHorspool(string p, string t){
 		}
 		else{
 			int x = char_in_string(t[i], p);
-			if(x > p.length()-1) i=i+v;
+			if(x < 0) i=i+v;
 			else i=i+v-x-1;
 		}
 	}

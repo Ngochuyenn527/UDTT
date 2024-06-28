@@ -101,20 +101,20 @@ void A3(Maytinh d[], int k){
 	}
 }
 int main(){
-//	cout<<"Danh sach cac MAY TINH la: \n";
-//	th();
-//	A(d,n);
-//	
-//	
-//	cout<<"\nDanh sach cac MAY TINH co kich thuoc > 15.6 inches la: \n";
-//	th();
-//	int stt = 0;
-//	A1(d,0,n-1,stt);
-//	
-//	
-//	int sum = 0;
-//	cout<<"\nTong gia ban cua danh sach may tinh la: "<<A2(d,n,sum)<<"\n";
-//	
+	cout<<"Danh sach cac MAY TINH la: \n";
+	th();
+	A(d,n);
+	
+	
+	cout<<"\nDanh sach cac MAY TINH co kich thuoc > 15.6 inches la: \n";
+	th();
+	int stt = 0;
+	A1(d,0,n-1,stt);
+	
+	
+	int sum = 0;
+	cout<<"\nTong gia ban cua danh sach may tinh la: "<<A2(d,n,sum)<<"\n";
+	
 	A3(d,1);
 	cout<<"\nTong so cach xep n MAY TINH vao n cho la: "<<count2<<"\n";
 }
